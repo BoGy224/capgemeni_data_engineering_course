@@ -203,3 +203,35 @@ FOR EACH ROW
 EXECUTE FUNCTION fn_adjust_book_price();
 
 
+# Task 10
+CREATE TABLE SalesArchive AS TABLE sales WITH NO DATA;
+
+CREATE OR REPLACE PROCEDURE sp_archive_old_sales(IN p_cutoff_date DATE)
+LANGUAGE plpgsql
+AS $$
+DECLARE v_sale_id INT;
+DECLARE v_book_id INT;
+DECLARE v_sale_date DATE;
+DECLARE v_customer_id INT;
+DECLARE v_quantity INT;
+    
+DECLARE cur_sales CURSOR FOR 
+SELECT sale_id,book_id,customer_id,quantity,sale_date FROM sales WHERE sale_date < p_cutoff_date;
+    
+BEGIN
+    
+    OPEN cur_sales;
+    
+    LOOP
+        FETCH NEXT FROM cur_sales INTO v_sale_id,v_book_id,v_customer_id,v_quantity,v_sale_date;
+        EXIT WHEN NOT FOUND;
+
+        INSERT INTO SalesArchive (sale_id,book_id,customer_id,quantity,sale_date)
+        VALUES (v_sale_id,v_book_id,v_customer_id,v_quantity,v_sale_date);
+        
+        DELETE FROM sales WHERE sale_id = v_sale_id;
+    END LOOP;
+    CLOSE cur_sales;
+END$$
+
+CALL sp_archive_old_sales('2023-01-01');
