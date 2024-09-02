@@ -1,0 +1,65 @@
+[2024-09-02T19:29:27.122+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nyc_airbnb_etl.insert_data_to_postgres manual__2024-09-02T19:29:17.036826+00:00 [queued]>
+[2024-09-02T19:29:27.128+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nyc_airbnb_etl.insert_data_to_postgres manual__2024-09-02T19:29:17.036826+00:00 [queued]>
+[2024-09-02T19:29:27.129+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2024-09-02T19:29:27.252+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): insert_data_to_postgres> on 2024-09-02 19:29:17.036826+00:00
+[2024-09-02T19:29:27.256+0000] {standard_task_runner.py:60} INFO - Started process 90 to run task
+[2024-09-02T19:29:27.259+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'nyc_airbnb_etl', 'insert_data_to_postgres', 'manual__2024-09-02T19:29:17.036826+00:00', '--job-id', '172', '--raw', '--subdir', 'DAGS_FOLDER/nyc_airbnb_etl.py', '--cfg-path', '/tmp/tmpr2ensb8h']
+[2024-09-02T19:29:27.261+0000] {standard_task_runner.py:88} INFO - Job 172: Subtask insert_data_to_postgres
+[2024-09-02T19:29:27.290+0000] {task_command.py:423} INFO - Running <TaskInstance: nyc_airbnb_etl.insert_data_to_postgres manual__2024-09-02T19:29:17.036826+00:00 [running]> on host 008d58b09353
+[2024-09-02T19:29:27.343+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Vlad_Hnatiuk' AIRFLOW_CTX_DAG_ID='nyc_airbnb_etl' AIRFLOW_CTX_TASK_ID='insert_data_to_postgres' AIRFLOW_CTX_EXECUTION_DATE='2024-09-02T19:29:17.036826+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-02T19:29:17.036826+00:00'
+[2024-09-02T19:29:27.467+0000] {base.py:83} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2024-09-02T19:29:27.474+0000] {sql.py:450} INFO - Running statement: TRUNCATE TABLE airbnb_listings, parameters: None
+[2024-09-02T19:29:27.582+0000] {base.py:83} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2024-09-02T19:29:28.509+0000] {sql.py:544} INFO - Loaded 1000 rows into airbnb_listings so far
+[2024-09-02T19:29:29.450+0000] {sql.py:544} INFO - Loaded 2000 rows into airbnb_listings so far
+[2024-09-02T19:29:30.451+0000] {sql.py:544} INFO - Loaded 3000 rows into airbnb_listings so far
+[2024-09-02T19:29:31.472+0000] {sql.py:544} INFO - Loaded 4000 rows into airbnb_listings so far
+[2024-09-02T19:29:32.510+0000] {sql.py:544} INFO - Loaded 5000 rows into airbnb_listings so far
+[2024-09-02T19:29:33.507+0000] {sql.py:544} INFO - Loaded 6000 rows into airbnb_listings so far
+[2024-09-02T19:29:34.469+0000] {sql.py:544} INFO - Loaded 7000 rows into airbnb_listings so far
+[2024-09-02T19:29:35.412+0000] {sql.py:544} INFO - Loaded 8000 rows into airbnb_listings so far
+[2024-09-02T19:29:36.366+0000] {sql.py:544} INFO - Loaded 9000 rows into airbnb_listings so far
+[2024-09-02T19:29:37.318+0000] {sql.py:544} INFO - Loaded 10000 rows into airbnb_listings so far
+[2024-09-02T19:29:38.268+0000] {sql.py:544} INFO - Loaded 11000 rows into airbnb_listings so far
+[2024-09-02T19:29:39.217+0000] {sql.py:544} INFO - Loaded 12000 rows into airbnb_listings so far
+[2024-09-02T19:29:40.185+0000] {sql.py:544} INFO - Loaded 13000 rows into airbnb_listings so far
+[2024-09-02T19:29:41.168+0000] {sql.py:544} INFO - Loaded 14000 rows into airbnb_listings so far
+[2024-09-02T19:29:42.160+0000] {sql.py:544} INFO - Loaded 15000 rows into airbnb_listings so far
+[2024-09-02T19:29:43.122+0000] {sql.py:544} INFO - Loaded 16000 rows into airbnb_listings so far
+[2024-09-02T19:29:44.052+0000] {sql.py:544} INFO - Loaded 17000 rows into airbnb_listings so far
+[2024-09-02T19:29:44.989+0000] {sql.py:544} INFO - Loaded 18000 rows into airbnb_listings so far
+[2024-09-02T19:29:45.983+0000] {sql.py:544} INFO - Loaded 19000 rows into airbnb_listings so far
+[2024-09-02T19:29:46.926+0000] {sql.py:544} INFO - Loaded 20000 rows into airbnb_listings so far
+[2024-09-02T19:29:47.875+0000] {sql.py:544} INFO - Loaded 21000 rows into airbnb_listings so far
+[2024-09-02T19:29:48.818+0000] {sql.py:544} INFO - Loaded 22000 rows into airbnb_listings so far
+[2024-09-02T19:29:49.757+0000] {sql.py:544} INFO - Loaded 23000 rows into airbnb_listings so far
+[2024-09-02T19:29:50.721+0000] {sql.py:544} INFO - Loaded 24000 rows into airbnb_listings so far
+[2024-09-02T19:29:51.675+0000] {sql.py:544} INFO - Loaded 25000 rows into airbnb_listings so far
+[2024-09-02T19:29:52.634+0000] {sql.py:544} INFO - Loaded 26000 rows into airbnb_listings so far
+[2024-09-02T19:29:53.590+0000] {sql.py:544} INFO - Loaded 27000 rows into airbnb_listings so far
+[2024-09-02T19:29:54.571+0000] {sql.py:544} INFO - Loaded 28000 rows into airbnb_listings so far
+[2024-09-02T19:29:55.532+0000] {sql.py:544} INFO - Loaded 29000 rows into airbnb_listings so far
+[2024-09-02T19:29:56.458+0000] {sql.py:544} INFO - Loaded 30000 rows into airbnb_listings so far
+[2024-09-02T19:29:57.428+0000] {sql.py:544} INFO - Loaded 31000 rows into airbnb_listings so far
+[2024-09-02T19:29:58.373+0000] {sql.py:544} INFO - Loaded 32000 rows into airbnb_listings so far
+[2024-09-02T19:29:59.320+0000] {sql.py:544} INFO - Loaded 33000 rows into airbnb_listings so far
+[2024-09-02T19:30:00.283+0000] {sql.py:544} INFO - Loaded 34000 rows into airbnb_listings so far
+[2024-09-02T19:30:01.212+0000] {sql.py:544} INFO - Loaded 35000 rows into airbnb_listings so far
+[2024-09-02T19:30:02.195+0000] {sql.py:544} INFO - Loaded 36000 rows into airbnb_listings so far
+[2024-09-02T19:30:03.223+0000] {sql.py:544} INFO - Loaded 37000 rows into airbnb_listings so far
+[2024-09-02T19:30:04.240+0000] {sql.py:544} INFO - Loaded 38000 rows into airbnb_listings so far
+[2024-09-02T19:30:05.265+0000] {sql.py:544} INFO - Loaded 39000 rows into airbnb_listings so far
+[2024-09-02T19:30:06.219+0000] {sql.py:544} INFO - Loaded 40000 rows into airbnb_listings so far
+[2024-09-02T19:30:07.158+0000] {sql.py:544} INFO - Loaded 41000 rows into airbnb_listings so far
+[2024-09-02T19:30:08.118+0000] {sql.py:544} INFO - Loaded 42000 rows into airbnb_listings so far
+[2024-09-02T19:30:09.089+0000] {sql.py:544} INFO - Loaded 43000 rows into airbnb_listings so far
+[2024-09-02T19:30:10.039+0000] {sql.py:544} INFO - Loaded 44000 rows into airbnb_listings so far
+[2024-09-02T19:30:11.003+0000] {sql.py:544} INFO - Loaded 45000 rows into airbnb_listings so far
+[2024-09-02T19:30:11.957+0000] {sql.py:544} INFO - Loaded 46000 rows into airbnb_listings so far
+[2024-09-02T19:30:12.933+0000] {sql.py:544} INFO - Loaded 47000 rows into airbnb_listings so far
+[2024-09-02T19:30:13.854+0000] {sql.py:544} INFO - Loaded 48000 rows into airbnb_listings so far
+[2024-09-02T19:30:14.693+0000] {sql.py:547} INFO - Done loading. Loaded a total of 48895 rows into airbnb_listings
+[2024-09-02T19:30:14.702+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-09-02T19:30:14.709+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=nyc_airbnb_etl, task_id=insert_data_to_postgres, execution_date=20240902T192917, start_date=20240902T192927, end_date=20240902T193014
+[2024-09-02T19:30:14.749+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-09-02T19:30:14.766+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
