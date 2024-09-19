@@ -4,7 +4,7 @@
 
 The directory structure for this project is as follows:
 ```
-/Spark/
+/Snowflake/
 ├── chunks/
 │   ├── AB_NYC_2019_0.csv
 │   ├── AB_NYC_2019_1.csv
