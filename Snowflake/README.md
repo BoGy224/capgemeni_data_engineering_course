@@ -7,15 +7,15 @@ The directory structure for this project is as follows:
 /Spark/
 ├── chunks/
 │   ├── AB_NYC_2019_0.csv
-│	├── AB_NYC_2019_1.csv
-│	├── AB_NYC_2019_2.csv
-│	├── AB_NYC_2019_3.csv
+│   ├── AB_NYC_2019_1.csv
+│   ├── AB_NYC_2019_2.csv
+│   ├── AB_NYC_2019_3.csv
 │   ├── AB_NYC_2019_4.csv
-│	├── AB_NYC_2019_5.csv
+│   ├── AB_NYC_2019_5.csv
 │   ├── AB_NYC_2019_6.csv
-│	├── AB_NYC_2019_7.csv
+│   ├── AB_NYC_2019_7.csv
 │   ├── AB_NYC_2019_8.csv
-│	├── AB_NYC_2019_9.csv
+│   ├── AB_NYC_2019_9.csv
 ├── pipeline.sql
 ├── configuration.sql
 ```
