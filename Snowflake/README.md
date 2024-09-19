@@ -34,3 +34,5 @@ The directory structure for this project is as follows:
 3. Execute the `pipepline.sql`
 4. Use the Snowflake UI to monitor job execution.
 
+
+
